@@ -72,6 +72,25 @@ mov ax, 0x4F01
 mov cx, 0x115
 int 10h
 
+cmp ax, 0x004F
+je VESAsuc
+
+VESAfail:
+mov ah, 0x0E
+mov al, 'V'
+int 10h
+
+mov ah, 0x0E
+mov al, 'B'
+int 10h
+
+mov ah, 0x0E
+mov al, 'E'
+int 10h
+
+jmp $
+
+VESAsuc:
 mov eax, dword [0x8A28]
 mov dword [0x8B00], eax
 
