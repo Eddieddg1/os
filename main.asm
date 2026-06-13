@@ -72,6 +72,9 @@ mov ax, 0x4F01
 mov cx, 0x115
 int 10h
 
+mov eax, dword [0x8A28]
+mov dword [0x8B00], eax
+
 cli
 lgdt [0x8628]
 
