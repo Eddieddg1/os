@@ -66,7 +66,7 @@ mov dword [0x8624], 0x00CF9200
 mov word [0x8628], 0x0017
 mov dword [0x862A], 0x00008610
 
-mov di, 0x8a00
+mov di, 0x8800
 
 mov ax, 0x4F01
 mov cx, 0x115
@@ -91,8 +91,14 @@ int 10h
 jmp $
 
 VESAsuc:
-mov eax, dword [0x8A28]
-mov dword [0x8B00], eax
+mov eax, dword [0x8828]
+mov dword [0x8900], eax
+
+mov di, 0x8A00
+
+mov ax, 0x4F01
+mov cx, 0x115
+int 10h
 
 cli
 lgdt [0x8628]
