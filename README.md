@@ -1,2 +1,2 @@
-# project-texteditor
-This is the repo for my text editor.
+# os
+This is the repo for my os.
